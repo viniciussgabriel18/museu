@@ -8,91 +8,119 @@
     <meta name="author" content="Vinicius Gabriel">
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/estilo.css">
     
     <title>Livro de Visitas</title>
 </head>
 
 <body>
+    <div class="row" id="header">
+        <div id="imagens">
+            <button id="brasil" >
+                <img src="./img/brasil.png" width="40px" alt="" >
+            </button>
+        
+            <button id="espanha">
+                <img src="./img/espanha.png" width="40px" alt="" >
+            </button>
 
-    <form action="pagina.php" method="POST">
-        <div class="form-group">
-            <div class="col-md-4 mb-3">
-                <label for="validationTooltip01">Nome</label>
-                <input type="text" name="nome" class="form-control" id="validationTooltip01" placeholder="Digite seu Nome" value="" required>
-            <div class="valid-tooltip">
+            <button id="eua">
+                <img src="./img/eua.jpeg" width="40px" alt="">
+            </button>
         </div>
-
-        <div class="form-group">
-            <div class="form">
-                <label for="validationTooltip01">Idade</label>
-                <input type="number" name="idade" class="form-control" id="validationTooltip01" placeholder="Idade" value="" required min="13" max="110">
-            <div class="valid-tooltip">
+    </div>
+    
+    <div class="row">
+        <div class="col-sm">
+            <img src="./img/coliseu-roma.jpg" width="100%" height="auto">
         </div>
+        
+        <div class="col-sm">    
+            <form action="./src/services/pagina.php" method="POST">
+                <div class="form-group">
+                    <div class="col">
+                        <label for="nome_id">Nome</label>
+                        <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value="" required>
+                    <div class="valid-tooltip">
+                </div>
 
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Escolaridade</label>
-            <select class="form-control" name="escolaridade" id="exampleFormControlSelect1">
-                <option value="1">Ensino Fundamental Incompleto</option>
-                <option value="2">Ensino Fundamental Completo</option>
-                <option value="3">Ensino Medio Incompleto</option>
-                <option value="4">Ensino Medio Completo</option>
-                <option value="5">Ensino Superior Incompleto</option>
-                <option value="6">Ensino Superir Completo</option>
-            </select>
-        </div>
+                <div class="form-group">
+                    <div class="form">
+                        <label for="idade_id">Idade</label>
+                        <input type="number" name="idade" class="form-control" id="idade_id" placeholder="Idade" value="" required min="13" max="110">
+                    <div class="valid-tooltip">
+                </div>
 
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Intrituição</label>
-            <input type="text" name="instituicao" class="form-control" id="exampleFormControlInput1" placeholder="Instituição">
-        </div>
-
-        <div class="form-group">
-            <label for="form-check-input" >Turista</label> <br>
-            
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="turista" id="inlineRadio2" value="1">
-                <label class="form-check-label" for="inlineRadio2">Sim</label>
-            </div>
-            
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="turista" id="inlineRadio2" value="0">
-                <label class="form-check-label" for="inlineRadio2">Não</label>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Comentario</label>
-            <textarea class="form-control" name="comentario" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputState">Pais</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="inputState">Estado</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="inputState">Cidade</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                <div class="form-group">
+                    <label for="escolaridade_id">Escolaridade</label>
+                    <select class="form-control" name="escolaridade" id="escolaridade_id">
+                        <option value="1">Ensino Fundamental Incompleto</option>
+                        <option value="2">Ensino Fundamental Completo</option>
+                        <option value="4">Ensino Medio Completo</option>
+                        <option value="3">Ensino Medio Incompleto</option>
+                        <option value="5">Ensino Superior Incompleto</option>
+                        <option value="6">Ensino Superir Completo</option>
                     </select>
-            </div>
-        </div>
+                </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+                <div class="form-group">
+                    <label for="instituicao_id">Instituição</label>
+                    <input type="text" name="instituicao" class="form-control" id="instituicao_id" placeholder="Instituição">
+                </div>
+
+                <div class="form-group">
+                    <label for="turista_id" >Turista</label> <br>
+                    
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="turista" id="turista_id" value="1">
+                        <label class="form-check-label" for="sim_id">Sim</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="turista" id="inlineRadio2" value="0">
+                        <label class="form-check-label" for="nao_id">Não</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="county_id">Pais</label>
+                        <select id="coutry_id" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="state_id">Estado</label>
+                        <select id="state_id" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="city_id">Cidade</label>
+                            <select id="city_id" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentario_id">Comentario</label>
+                    <textarea class="form-control" name="comentario" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
+    <script src="./src/scripts/languages.js"></script>
+    <script src="./src/scripts/renderPaises.js"> </script>
 </body>
+
 </html>

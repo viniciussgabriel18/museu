@@ -1,0 +1,9 @@
+#imagens {
+    display: block ;
+    position: relative;
+    margin-left: 10px;
+}
+
+#reader {
+    color: black;
+}

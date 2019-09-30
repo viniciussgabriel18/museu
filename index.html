@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="row" id="header">
+    <div class="row" id="header"> 
         <div id="imagens">
             <button id="brasil" >
                 <img src="./img/brasil.png" width="40px" alt="" >
@@ -36,7 +36,7 @@
         </div>
         
         <div class="col-sm">    
-            <form action="./src/services/pagina.php" method="POST">
+            <form action="./src/services/CadastroPessoas.php" method="POST">
                 <div class="form-group">
                     <div class="col">
                         <label for="nome_id">Nome</label>
@@ -56,10 +56,10 @@
                     <select class="form-control" name="escolaridade" id="escolaridade_id">
                         <option value="1">Ensino Fundamental Incompleto</option>
                         <option value="2">Ensino Fundamental Completo</option>
-                        <option value="4">Ensino Medio Completo</option>
                         <option value="3">Ensino Medio Incompleto</option>
+                        <option value="4">Ensino Medio Completo</option>
                         <option value="5">Ensino Superior Incompleto</option>
-                        <option value="6">Ensino Superir Completo</option>
+                        <option value="6">Ensino Superior Completo</option>
                     </select>
                 </div>
 
@@ -85,25 +85,20 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="county_id">Pais</label>
-                        <select id="coutry_id" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
+                        <select id="country_id" class="form-control"></select>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="state_id">Estado</label>
                         <select id="state_id" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
+                            
                         </select>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="city_id">Cidade</label>
                             <select id="city_id" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
+                                
                             </select>
                     </div>
                 </div>

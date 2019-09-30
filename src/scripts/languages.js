@@ -1,18 +1,9 @@
-function removeOptions (){
-    for  (var i = 0; i <= 6; i++){
-        querySelector
+function AlteraEscolaridade(escol){
+    var Options = $('#escolaridade_id').find('option')
+    for (i in Options){
+        Options[i].innerHTML = escol[i];
     }
 }
-
-function AlteraEscolaridade (escolaridade){
-    var select = document.getElementById ('escolaridade_id');
-    for (var i of escolaridade){
-        var listElement = document.createElement('option')
-        listElement.innerHTML = i;
-        select.appendChild(listElement);
-    }
-}
-
 
 /* Altera o idioma para ingles */
 document.getElementById('eua').onclick = () => {
@@ -23,7 +14,7 @@ document.getElementById('eua').onclick = () => {
     document.querySelector('label[for=idade_id]').innerHTML = "Age";
     document.getElementById('idade_id').placeholder = "Age";
     
-    document.querySelector('label[for=escolaridade_id]').innerHTML = "";
+    document.querySelector('label[for=escolaridade_id]').innerHTML = "Schooling";
     
     document.querySelector('label[for=instituicao_id]').innerHTML = "Institution";
     document.getElementById('instituicao_id').placeholder = "Institution";
@@ -40,8 +31,11 @@ document.getElementById('eua').onclick = () => {
     document.querySelector('label[for=state_id]').innerHTML = "State";
     document.querySelector('label[for=city_id]').innerHTML = "City";
 
-    var list = ['aaa', 'bbb', 'ccc'];
-    removeOptions ();
+    var escol = ["Incomplete Elementary School", "Complete primary education",
+        "Incomplete high school", "Complete high school", "Incomplete Higher Education",
+        "Higher Education Complete"];
+
+    AlteraEscolaridade (escol);
 }
 
 /* Altera o idioma para Espanhol */
@@ -70,6 +64,12 @@ document.getElementById('espanha').onclick = () => {
     document.querySelector('label[for=state_id]').innerHTML = "Departamento";
     document.querySelector('label[for=city_id]').innerHTML = "Ciudad";
 
+    var escol = ["Escuela primaria incompleta", "Educación primaria completa",
+        "Escuela secundaria incompleta", "Completado la escuela secundaria", "Educación superior incompleta",
+        "Educación superior completa"];
+
+    AlteraEscolaridade(escol);
+
 }
 
 /* Altera o Idioma Para Portugês */
@@ -96,5 +96,11 @@ document.getElementById('brasil').onclick = () => {
     document.querySelector('label[for=county_id]').innerHTML = "Pais";
     document.querySelector('label[for=state_id]').innerHTML = "Estado";
     document.querySelector('label[for=city_id]').innerHTML = "Cidade";
+
+    var escol = ["Ensino Fundamental Completo", "Ensino Fundamental Completo",
+        "Ensino Medio Completo", "Ensino Medio Incompleto", "Ensino Superior Incompleto",
+        "Ensino Superior Completo"];
+
+    AlteraEscolaridade(escol);
     
 }

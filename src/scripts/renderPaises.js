@@ -1,4 +1,5 @@
 $.getJSON ("./src/services/BuscaPaises.php?busca=country", function (response){
+
     let SelectPaises = document.getElementById ('country_id');
         
         response.forEach(element => {

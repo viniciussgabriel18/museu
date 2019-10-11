@@ -1,5 +1,6 @@
 function AlteraEscolaridade(escol){
     var Options = $('#escolaridade_id').find('option')
+    
     for (i in Options){
         Options[i].innerHTML = escol[i];
     }
@@ -49,7 +50,6 @@ document.getElementById('espanha').onclick = () => {
     
     document.querySelector('label[for=escolaridade_id]').innerHTML = "Escolaridade";
 
-
     document.querySelector('label[for=instituicao_id]').innerHTML = "Institución";
     document.getElementById('instituicao_id').placeholder = "Institución";
 
@@ -69,7 +69,6 @@ document.getElementById('espanha').onclick = () => {
         "Educación superior completa"];
 
     AlteraEscolaridade(escol);
-
 }
 
 /* Altera o Idioma Para Portugês */
@@ -81,7 +80,6 @@ document.getElementById('brasil').onclick = () => {
     document.getElementById('idade_id').placeholder = "Idade";
 
     document.querySelector('label[for=escolaridade_id]').innerHTML = "Escolaridade";
-
 
     document.querySelector('label[for=instituicao_id]').innerHTML = "Instituição";
     document.getElementById('instituicao_id').placeholder = "Instituição";
@@ -101,6 +99,5 @@ document.getElementById('brasil').onclick = () => {
         "Ensino Medio Completo", "Ensino Medio Incompleto", "Ensino Superior Incompleto",
         "Ensino Superior Completo"];
 
-    AlteraEscolaridade(escol);
-    
+    AlteraEscolaridade(escol);    
 }

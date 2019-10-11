@@ -3,7 +3,6 @@ $(document).ready ( ()=> {
         $('#visitMes').html("Visitantes no Mes: "+response.quant);
     });
 
-
     $.getJSON("./src/services/DadosAutomaticos.php?opcao=ano", (response) => {
         $('#visitAno').html("Visitantes no Ano:" + response.quant);
     });

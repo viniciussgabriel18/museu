@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="pr-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Vinicius Gabriel">
     
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap4-toggle.min.css">
+  <link rel="stylesheet" href="./css/EstiloFormulario.css">
+  <link rel="stylesheet" href="./css/turistaCheckbox.css">
     
   <title>Livro de Visitas</title>
-</head>
 
 <body>
-  <nav class="navbar navbar-dark bg-dark" >
-        <!-- Conteúdo do navbar -->
-        <div class="row justify-content-end" style="margin-left: 400px">
-          
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-          aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-          <img src="./img/brasil.png" width="50" height="30" alt="" id="brasil">
-        </button>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <img src="./img/espanha.png" width="50" height="30" alt="" id="espanha">
-      </button>
+
+  <!-- Conteúdo do navbar -->
+  <nav class="navbar navbar-dark bg-dark" style="width: 100%">
+    <div class="col"></div>
+    
+    <div class="row justify-content-end">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
       aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <img src="./img/usa.png" width="50" height="30" alt="" id="eua">
-    </button>
-  </div>
+      <img src="./src/img/brasil.png" width="50" height="30" alt="" id="brasil">
+      </button>
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <img src="./src/img/espanha.png" width="50" height="30" alt="" id="espanha">
+      </button>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <img src="./src/img/usa.png" width="50" height="30" alt="" id="eua">
+      </button>
+    </div>
   </nav>
 
+<!-- <input type="checkbox" checked data-toggle="toggle" data-on="<img src='./img/brasil.png' width='40'></img>"
+  data-off="<img src='./img/brasil.png' width='40'></img>"> -->
   
-
-  <div class="row" style="margin-top: 40px">
+  <div class="row">
+  
+    <!-- Div imagem do Museu  -->
     <div class="col">
-        <img src="./img/coliseu-roma.jpg" class="img-fluid rounded mx-auto d-block">
+        <img src="./src/img/img/MuseuSimbolo.jpg" class="img-fluid rounded mx-auto d-block" height="700%">
     </div>
 
+    <!-- Coluna 1 do Formulario -->
     
     <div class="col">
       <form action="./src/services/CadastroPessoas.php" method="POST">
         <div class="form-group">
           <label for="nome_id">Nome</label>
-            <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value="" required>
+          <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value="" required>
         </div>
 
         <div class="form-group">
@@ -71,50 +79,55 @@
           <textarea class="form-control" name="comentario" id="comentario_id" rows="3"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      
+        <button type="submit" class="btn btn-primary">Salvar</button>
     </div>
+
+    <!-- Coluna 2 do Formulário -->
 
     <div class="col">
       <div class="form-row">
+        
         <div class="form-group col">
           <label for="idade_id">Idade</label>
           <input type="number" name="idade" class="form-control" id="idade_id" placeholder="Idade" value="" required min="13" max="110">
         </div>
 
-        <div class="form-group col" style="margin-left: 40px">      
+        <div class="form-group col">      
           <label for="turista_id">Turista</label> <br>
-          <div class="form-check form-check-inline" style="margin-top: 6px">
-            <input class="form-check-input" type="radio" name="turista" id="turista_id" value="1">
-            <label class="form-check-label" for="sim_id">Sim</label>
-          </div>
-      
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="turista" id="inlineRadio2" value="0">
-            <label class="form-check-label" for="nao_id">Não</label>
-          </div>
-        </div>     
+          <label class="container" >
+            <input type="checkbox" name="turista" value="1"> sim
+            <span class="checkmark" ></span>
+          </label>
+        </div>
       </div>
 
       <div class="form-group">
         <label for="county_id">Pais</label>
-        <select id="country_id" class="form-control"></select>
+        <select id="country_id" class="form-control">
+          <option value="-1"> Selecione o pais ...</option>
+        </select>
       </div>
         
-      <div class="form-group">
+      <div class="form-group" id="estado">
         <label for="state_id">Estado</label>
-        <select id="state_id" class="form-control"></select>
+        <select id="state_id" class="form-control">
+          <option value="-1"> Selecione o estado ...</option>
+        </select>
       </div>
         
       <div class="form-group">
           <label for="city_id">Cidade</label>
-          <select id="city_id" class="form-control"></select>
-        </div>
-      </form>
-    </div>
+          <select id="city_id" class="form-control">
+            <option value=""> Selecione a cidade...</option>
+          </select>
+      </div>
+    </form>
   </div>
+</div>
   
-  <div class="row">
+  <!-- Rodapé Da Pagina, numero de visitantes -->
+
+  <div class="row" >
     <div class="col" style="margin-top: 50px">
       <p class="text-left text-info" id="visitAno">
         Visitantes no Ano: 
@@ -132,12 +145,14 @@
         Total de Visitantes:
       </p>
     </div>
-
   </div>
 
+  <!-- scripts js -->
   <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
+  <script src="./bootstrap/js/bootstrap4-toggle.min.js"></script>
   <script src="./src/scripts/languages.js"></script>
   <script src="./src/scripts/renderPaises.js"> </script>
   <script src="./src/scripts/RenderVisitantes.js"></script>
+
 </body>
 </html>

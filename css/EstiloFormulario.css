@@ -1,0 +1,21 @@
+input[type="text"], textarea {
+  background-color : #d1d1d1; 
+}
+
+input[type="number"] {
+  background-color : #d1d1d1; 
+}
+
+#comentario_id {
+  background-color: #d1d1d1;
+}
+
+
+option::selected {
+  background-color: #d1d1d1;
+
+}
+
+select::selection {
+    background-color: #d1d1d1;
+}

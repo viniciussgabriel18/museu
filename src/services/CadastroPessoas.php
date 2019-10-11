@@ -1,29 +1,31 @@
 <?php
 
+require_once ("./FuncAuxiliares.php");
+
 /* Abre uma concecção com o banco de dados */
-$dbconnect = new mysqli("localhost", "root","" ,"Museu");
+$dbconnect = Conectar();
 
 /*Valores recebidos do Formulário */
 $nome = $_POST["nome"];
 $idade = $_POST["idade"];
 $escolaridade = $_POST["escolaridade"];
 $instituicao = $_POST["instituicao"];
-$turista = $_POST["turista"];
+// $turista = $_POST["turista"];
 $comentario = $_POST["comentario"];
+$data = GeraData();
 
 /* Verifica se ocorreu algum erro na conecção*/
-
 if ($dbconnect->connect_error)  {
     echo ("Erro ao Conectar");
 }else {
-       
-    $sql = "INSERT INTO Dados_cadastro (nome, idade, escolaridade_id, turista, instituicao, comentario)
-     VALUES (('$nome'), ('$idade'), ('$escolaridade'), ('$turista'), ('$instituicao'), ('$comentario'))";
+
+    $sql = "INSERT INTO Dados_cadastro (nome, idade, escolaridade_id, instituicao, comentario, data_cadastro)
+     VALUES (('$nome'), ('$idade'), ('$escolaridade'), ('$instituicao'), ('$comentario'), ('$data'))";
 
     if($dbconnect->query($sql)){
         header('Location: ../../index.html');
     }else {
-        echo("Deu errado");
+        echo("Não Possivel Salvar os Dados");
     }
 }
 

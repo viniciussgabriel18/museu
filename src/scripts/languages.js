@@ -21,10 +21,7 @@ document.getElementById('eua').onclick = () => {
     document.getElementById('instituicao_id').placeholder = "Institution";
     
 
-    document.querySelector('label[for=turista_id]').innerHTML = "Tourist";
-    document.getElementById('turista_id').placeholder = "Tourist";
-    document.querySelector('label[for=sim_id]').innerHTML = "Yes"
-    document.querySelector('label[for=nao_id]').innerHTML = "Not"
+    document.querySelector('input[name=turista]').innerHTML = "Tourist";
     
     document.querySelector('label[for=comentario_id]').innerHTML = "Comments";
 
@@ -53,10 +50,7 @@ document.getElementById('espanha').onclick = () => {
     document.querySelector('label[for=instituicao_id]').innerHTML = "Institución";
     document.getElementById('instituicao_id').placeholder = "Institución";
 
-    document.querySelector('label[for=turista_id]').innerHTML = "Turista";
-    document.getElementById('turista_id').placeholder = "Turista";
-    document.querySelector('label[for=sim_id]').innerHTML = "Si"
-    document.querySelector('label[for=nao_id]').innerHTML = "No"
+    document.querySelector('#a#text').innerHTML = "Turistaaaa";
 
     document.querySelector('label[for=comentario_id]').innerHTML = "Comentario";
     
@@ -84,11 +78,8 @@ document.getElementById('brasil').onclick = () => {
     document.querySelector('label[for=instituicao_id]').innerHTML = "Instituição";
     document.getElementById('instituicao_id').placeholder = "Instituição";
 
-    document.querySelector('label[for=turista_id]').innerHTML = "Turista";
-    document.getElementById('turista_id').placeholder = "Turista";
-    document.querySelector('label[for=sim_id]').innerHTML = "Sim"
-    document.querySelector('label[for=nao_id]').innerHTML = "Não"
-
+    document.querySelector('input[name=turista]').innerHTML = "Turista";
+   
     document.querySelector('label[for=comentario_id]').innerHTML = "Comentario";
 
     document.querySelector('label[for=county_id]').innerHTML = "Pais";

@@ -1,0 +1,66 @@
+nav#LinhaNav {
+    width: 99.6%;
+    margin-left: .2%;
+}
+
+div#LinhaForm {
+    width: 100%;
+    margin-top: .3%;
+    padding-left: .2%;
+    
+}
+
+
+div#ImgMuseu {
+            
+}
+
+
+div#form1{
+   
+}
+
+div#form2{
+   width: 100%;
+}
+
+div#LinhaRodaPe {
+   
+    width: 99.8%;
+    margin-top: 5%;
+    padding-left: .2%;
+
+    /* margin-left: .2%; */
+}
+
+div#turista{
+    padding-left: 10%;
+    position: relative;
+    margin-top: auto;
+}
+
+img#navimg {
+    height: 60px;
+    width: 99.8%;
+    padding-left: .2%;  
+}
+
+img#log {
+    width: 5%;
+    height: 50px;
+    position: relative;
+    float: left;
+    margin-top: -4%;
+    margin-left: 35%;
+    
+}
+
+p#titulo {
+    font-size: 70%;
+    margin-left: .5%;
+    position: relative;
+    float: left;
+    z-index: auto;
+    margin-top: -3.9%;
+    color: white; 
+}

@@ -66,21 +66,23 @@ p#titulo {
 }
 
 .imglang{
-    display: inline;
+
     position: relative;
     margin-top: -7.8%;
-    width: 80px;
-    height: 60px;
-    background-color:transparent;
-}
-.imglang:hover{
-    position: relative;
-    margin-top: -7.8%;
-    width: 80px;
-    height: 60px;
-    background-color:transparent;
-    border-color: aqua;
-}
+    width: 70px;
+    height: 30px;
+    
+    background-color:white;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	
+	/* padding:16px 31px; */
+	
+	}
+
 
 div#lang{
     float: right;

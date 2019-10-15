@@ -11,16 +11,35 @@
   <link rel="stylesheet" href="./bootstrap/css/bootstrap4-toggle.min.css">
   <link rel="stylesheet" href="./css/EstiloFormulario.css">
   <link rel="stylesheet" href="./css/turistaCheckbox.css">
+  <link rel="stylesheet" href="./css/OrganizaPage.css">
     
   <title>Livro de Visitas</title>
 
 <body>
 
+  <h1>
+    <img src="./src/img/img/NavImg.jpg" id="navimg" >
+    <p id="titulo"> Museu de Arqueologia do Pantanal</p> 
+    <img src="./src/img/img/LogoMuseu.png" id="log">
+    
+    <div id="lang">
+      <!-- <button class="butlang" > -->
+        <img src="./src/img/img/pt.png" class="imglang" id="brasil">
+      <!-- </button> -->
+      <!-- <button class="butlang"> -->
+        <img src="./src/img/img/esp.png" class="imglang" id="espanha">
+      <!-- </button> -->
+      <!-- <button class="butlang"> -->
+        <img src="./src/img/img/eng.png" class="imglang"  id="eua">
+      <!-- </button> -->
+
+    </div>
+  </h1>
   <!-- Conteúdo do navbar -->
-  <nav class="navbar navbar-dark bg-dark" style="width: 100%">
+  <!-- <nav class="navbar navbar-dark bg-dark" id="LinhaNav">
     <div class="col"></div>
     
-    <div class="row justify-content-end">
+    <div class="row justify-content-end" id="IdiomaBotao">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
       aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <img src="./src/img/brasil.png" width="50" height="30" alt="" id="brasil">
@@ -36,28 +55,28 @@
       <img src="./src/img/usa.png" width="50" height="30" alt="" id="eua">
       </button>
     </div>
-  </nav>
+  </nav> -->
 
 <!-- <input type="checkbox" checked data-toggle="toggle" data-on="<img src='./img/brasil.png' width='40'></img>"
   data-off="<img src='./img/brasil.png' width='40'></img>"> -->
   
-  <div class="row">
+  <div class="row" id="LinhaForm">
   
     <!-- Div imagem do Museu  -->
     <div class="col">
-        <img src="./src/img/img/MuseuSimbolo.jpg" class="img-fluid rounded mx-auto d-block" height="700%">
+        <img src="./src/img/img/MuseuSimbolo.jpg" class="img-fluid rounded mx-auto d-block" id="simbolo">
     </div>
 
     <!-- Coluna 1 do Formulario -->
     
-    <div class="col">
+    <div class="col" id="ImgMuseu">
       <form action="./src/services/CadastroPessoas.php" method="POST">
         <div class="form-group">
           <label for="nome_id">Nome</label>
           <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value="" required>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="form1">
           <label for="escolaridade_id">Escolaridade</label>
           <select class="form-control" name="escolaridade" id="escolaridade_id">
             <option value="1">Ensino Fundamental Incompleto</option>
@@ -84,7 +103,7 @@
 
     <!-- Coluna 2 do Formulário -->
 
-    <div class="col">
+    <div class="col" id="form2">
       <div class="form-row">
         
         <div class="form-group col">
@@ -92,11 +111,10 @@
           <input type="number" name="idade" class="form-control" id="idade_id" placeholder="Idade" value="" required min="13" max="110">
         </div>
 
-        <div class="form-group col">      
-          <label for="turista_id">Turista</label> <br>
+        <div class="form-group col" id="turista">      
           <label class="container" >
-            <input type="checkbox" name="turista" value="1"> sim
-            <span class="checkmark" ></span>
+            <input type="checkbox" name="turista" value="1" id="a"> Turista
+            <span class="checkmark" value="4" id="b"></span>
           </label>
         </div>
       </div>
@@ -110,14 +128,14 @@
         
       <div class="form-group" id="estado">
         <label for="state_id">Estado</label>
-        <select id="state_id" class="form-control">
+        <select id="state_id" class="form-control" >
           <option value="-1"> Selecione o estado ...</option>
         </select>
       </div>
         
       <div class="form-group">
           <label for="city_id">Cidade</label>
-          <select id="city_id" class="form-control">
+          <select id="city_id" class="form-control" name="cidade">
             <option value=""> Selecione a cidade...</option>
           </select>
       </div>
@@ -127,21 +145,22 @@
   
   <!-- Rodapé Da Pagina, numero de visitantes -->
 
-  <div class="row" >
-    <div class="col" style="margin-top: 50px">
-      <p class="text-left text-info" id="visitAno">
+  <div class="row" id="LinhaRodaPe" >
+    <div class="col-4"></div>
+    <div class="col" >
+      <p class="text-left text" id="visitAno">
         Visitantes no Ano: 
       </p>
     </div>
 
-    <div class="col" style="margin-top: 50px">
-      <p class="text-left text-info" id="visitMes">
+    <div class="col" >
+      <p class="text-left text" id="visitMes">
         Visitantes no Mês:
       </p>
     </div>
 
-    <div class="col" style="margin-top: 50px">
-      <p class="text-left text-info" id="visitTotal">
+    <div class="col" >
+      <p class="text-left text" id="visitTotal">
         Total de Visitantes:
       </p>
     </div>

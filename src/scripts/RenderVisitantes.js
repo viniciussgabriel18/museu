@@ -1,13 +1,17 @@
 $(document).ready ( ()=> {
     $.getJSON("./src/services/DadosAutomaticos.php?opcao=mes", (response) => {
-        $('#visitMes').html("Visitantes no Mes: "+response.quant);
+        $('#visitMesVal').html(response.quant);
     });
 
     $.getJSON("./src/services/DadosAutomaticos.php?opcao=ano", (response) => {
-        $('#visitAno').html("Visitantes no Ano:" + response.quant);
+        $('#visitAnoVal').html(response.quant);
     });
 
     $.getJSON("./src/services/DadosAutomaticos.php?opcao=total", (response) => {
-        $('#visitTotal').html("Total de Visitantes:" + response.quant);
+        $('#visitTotalVal').html(response.quant);
     });
+
+    $('#visitAno').html ("Visitantes no ano: ");
+    $('#visitMes').html ("Visititantes no Mes: ");
+    $('#visitTotal').html ("Visitantes Total: ");
 });

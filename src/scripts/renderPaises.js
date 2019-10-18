@@ -54,7 +54,8 @@ $('#country_id').change (()=>{
     $.getJSON("./src/services/BuscaPaises.php?busca=states&idPais="+idCountry, function (response) {
 
         if (response == null){
-            $('#state_id').remove();
+            console.log ("Vinicius");
+            $('#state_id').hide ();
             $('label[for=state_id]').remove();
             renderCidades (idCountry);
         }else {

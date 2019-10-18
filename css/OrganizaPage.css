@@ -1,6 +1,7 @@
 nav#LinhaNav {
     width: 99.6%;
     margin-left: .2%;
+    display: flex;
 }
 
 div#LinhaForm {
@@ -56,6 +57,7 @@ img#log {
 }
 
 p#titulo {
+    height: auto;
     font-size: 70%;
     margin-left: .5%;
     position: relative;
@@ -63,6 +65,7 @@ p#titulo {
     z-index: auto;
     margin-top: -3.9%;
     color: white; 
+    
 }
 
 .imglang{
@@ -87,6 +90,7 @@ p#titulo {
 div#lang{
     float: right;
     margin-top: -4%;
+    margin-right: 5px;
 }
 
 #simbolo {

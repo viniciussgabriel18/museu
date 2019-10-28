@@ -1,46 +1,161 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pr-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/elements.css">
-    <title>Document</title>
+    <meta name="author" content="Vinicius Gabriel">
+    
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="./css/EstiloFormulario.css">
+    <link rel="stylesheet" href="./css/turistaCheckbox.css">
+    <link rel="stylesheet" href="./css/OrganizaPage.css">
+        
+    <title>Livro de Visitas</title>
 </head>
-<body>
 
-    <label for=""> testeee
-        <label class="container">One
-            <input type="radio" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        
-        <label class="container">Two
-            <input type="radio">
-            <span class="checkmark"></span>
-        </label>
-        
-        <label class="container">Three
-            <input type="radio">
-            <span class="checkmark"></span>
-        </label>
-        
-        <label class="container">Four
-            <input type="radio">
-            <span class="checkmark"></span>
-        </label>
-    </label>
+<body onload="standardcolor()">
+    <div class="row" id="linhaNav">
+        <img src="./src/img/img/topper-museu.png"  class="img-responsive" id="navimg">
 
-<div class="form-group col" style="margin-left: 40px">
-    <label for="turista_id" class="container">Turista
-    <div class="form-check form-check-inline" style="margin-top: 6px" class="radio1">
-        <input class="form-check-input" type="radio" name="turista" id="turista_id" value="1" class="container">
-        <span class="checkmark"></span>
-        <label class="form-check-label" for="sim_id">Sim</label>
+        <div id="nav">    
+            <div class= "col" id="logo">
+                <p  class="text-justify" id="titulo"> Museu de Arqueologia do Pantanal</p> 
+                <img src="./src/img/img/logoMuseu.png" id="log">
+            </div>
+            
+            <div class="col" id="lang" >
+                <img src="./src/img/img/pt.png" class="imglang" id="brasil">
+                <img src="./src/img/img/esp.png" class="imglang" id="espanha">
+                <img src="./src/img/img/eng.png" class="imglang"  id="eua">
+            </div>   
+        </div>
     </div>
-</label>
-
-</div>
-
+    <form action="./src/services/CadastroPessoas.php" method="POST">
+    
+    <div class="row" id="LinhaForm">
+        
+        <div class="col" id="divSimbolo">
+            <img src="./src/img/img/MuseuSimbolo.jpg" class="img-fluid rounded mx-auto d-block" id="simbolo">
+        </div>
+        
+        <!-- Coluna 1 do Formulario -->
+        
+            <div class="col">
+                <div class="form-group">
+                  <label for="nome_id">Nome</label>
+                  <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value="" required>
+                </div>
+        
+                <div class="form-group" id="form1">
+                  <label for="escolaridade_id">Escolaridade</label>
+                  <select class="form-control" name="escolaridade" id="escolaridade_id">
+                    <option value="1">Ensino Fundamental Incompleto</option>
+                    <option value="2">Ensino Fundamental Completo</option>
+                    <option value="3">Ensino Medio Incompleto</option>
+                    <option value="4">Ensino Medio Completo</option>
+                    <option value="5">Ensino Superior Incompleto</option>
+                    <option value="6">Ensino Superior Completo</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                  <label for="instituicao_id">Instituição</label>
+                  <input type="text" name="instituicao" class="form-control" id="instituicao_id" placeholder="Instituição">
+                </div>
+        
+                <div class="form-group">
+                  <label for="comentario_id">Comentario</label>
+                  <textarea class="form-control" name="comentario" id="comentario_id" rows="3"></textarea>
+                </div>
+        
+                <button type="submit" class="btn btn-primary" >Salvar</button>
+            </div>
+        
+            <!-- Coluna 2 do Formulário -->
+        
+            <div class="col" id="form2">
+              <div class="form-row">
+                
+                <div class="form-group col">
+                  <label for="idade_id">Idade</label>
+                  <input type="number" name="idade" class="form-control" id="idade_id" placeholder="Idade" value="" required min="13" max="110">
+                </div>
+        
+                <div class="form-group col" id="turista">      
+                  <label class="container" >
+                    <p id="turistaLabel">Turista</p>
+                    <input type="checkbox" name="turista" value="1" id="a">
+                    <span class="checkmark" value="4" id="b"></span>
+                  </label>
+                </div>
+              </div>
+        
+              <div class="form-group">
+                <label for="county_id">Pais</label>
+                <select id="country_id" class="form-control">
+                  <option value="-1"> Selecione o pais ...</option>
+                </select>
+              </div>
+                
+              <div class="form-group" id="estado">
+                <label for="state_id">Estado</label>
+                <select id="state_id" class="form-control" >
+                  <option value="-1"> Selecione o estado ...</option>
+                </select>
+              </div>
+                
+              <div class="form-group">
+                  <label for="city_id">Cidade</label>
+                  <select id="city_id" class="form-control" name="cidade">
+                    <option value=""> Selecione a cidade...</option>
+                  </select>
+              </div>
+            </div>
+        </div>
+    </form>
+          
+          <!-- Rodapé Da Pagina, numero de visitantes -->
+          <div class="row" id="LinhaRodaPe" >
+        
+            <div class="col-4"></div>
+            <div class="col" >
+              <span class="text-left text" id="visitAno">
+              </span>
+        
+              <span id="visitAnoVal"></span>
+        
+            </div>
+        
+            <div class="col" >
+              <span class="text-left text" id="visitMes">
+              </span>
+        
+              <span id="visitMesVal"></span>
+            </div>
+        
+            <div class="col" >
+              <span class="text-left text" id="visitTotal">
+              </span>
+        
+              <span id="visitTotalVal"></span>
+            </div>
+          </div>
+        
+        <div class="row" id="rodape">
+            <p></p>
+        </div>
+          <!-- scripts js -->
+          <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
+          <script src="./bootstrap/js/bootstrap4-toggle.min.js"></script>
+          <script src="./src/scripts/languages.js"></script>
+          <script src="./src/scripts/renderPaises.js"> </script>
+          <script src="./src/scripts/RenderVisitantes.js"></script> 
 
 </body>
+    
+
+
 </html>

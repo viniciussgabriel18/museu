@@ -27,7 +27,7 @@ document.getElementById('eua').onclick = () => {
     /**teste */
     document.getElementById('brasil').style.backgroundColor = "#d1d1d1";
     document.getElementById('espanha').style.backgroundColor = "#d1d1d1";
-    document.getElementById('eua').style.backgroundColor = "#002a97";
+    document.getElementById('eua').style.backgroundColor = "#686eab";
 
     document.querySelector('label[for=nome_id]').innerHTML = "Name";
     document.getElementById('nome_id').placeholder = "Type your name";

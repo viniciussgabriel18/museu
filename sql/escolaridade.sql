@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS Museu;
+
 CREATE TABLE IF NOT EXISTS escolaridade (
     id INT,
     descricao VARCHAR (30),

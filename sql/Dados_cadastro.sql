@@ -11,8 +11,3 @@ CREATE TABLE IF NOT EXISTS Dados_cadastro (
 );
 
 ALTER TABLE Dados_cadastro ADD FOREIGN KEY (escolaridade_id) REFERENCES escolaridade(id);
-ALTER TABLE Dados_cadastro ADD FOREIGN KEY (cidade_id) REFERENCES cities(id);
-
-INSERT INTO Dados_cadastro (nome, idade) VALUES
-('Vinicius Gabriel', 19),
-('Gabriel de Souza', 20);

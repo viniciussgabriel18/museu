@@ -63,7 +63,7 @@ div#nav {
 img#simbolo {
    width: 100%;
    height: 120%;
-}
+}   
 
 div#divSimbolo {
     margin-top: -2%;
@@ -72,7 +72,6 @@ div#divSimbolo {
 div#rodape{
     margin-top: 2%;
     background-color: brown;
-    height: 50px;
     margin-right: .01%;
 }
 
@@ -82,11 +81,16 @@ div#form2 {
 
 div#rodape div p{
     text-align: center;
-    font-size: 200%;
+    font-size: 150%;
 }
 
 button {
     float: right;
     margin-right: 1px;
     margin-top: 20%;
+}
+
+div.row {
+    display: flex;
+    flex-wrap: flex;
 }

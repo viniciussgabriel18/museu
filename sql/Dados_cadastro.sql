@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS Dados_cadastro (
   id INT PRIMARY KEY AUTO_INCREMENT ,
   nome VARCHAR (70),
   idade INT,
-  insituicao VARCHAR (30),
+  instituicao VARCHAR (30),
   escolaridade_id INT,
   turista BOOLEAN,
   comentario VARCHAR (255),

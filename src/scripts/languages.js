@@ -1,3 +1,12 @@
+/* Inicia as cores padrões dos botões de idiomas*/
+$(document).ready (() => {
+    document.getElementById('brasil').style.backgroundColor = "#00b440";
+    document.getElementById('espanha').style.backgroundColor = "#d1d1d1";
+    document.getElementById('eua').style.backgroundColor = "#d1d1d1";
+
+});
+
+/* Altera o idioma do Select de escolaridade*/
 function AlteraEscolaridade(escol) {
     var Options = $('#escolaridade_id').find('option')
 
@@ -6,28 +15,25 @@ function AlteraEscolaridade(escol) {
     }
 }
 
-
+/* Altera o idioma do rodape de visitantes*/
 function AlteraVisitantes (mes, ano, total){
     $('#visitMes').html(mes);
     $('#visitAno').html(ano);
     $('#visitTotal').html(total);
 }
 
-function standardcolor() {
-    /**teste */
-    document.getElementById('brasil').style.backgroundColor = "#00b440";
-    document.getElementById('espanha').style.backgroundColor = "#d1d1d1";
-    document.getElementById('eua').style.backgroundColor = "#d1d1d1";
+/* Altera as cores os botões de idiomas */
+function AlterColorButton (brasil, espanha, eua){
+    document.getElementById('brasil').style.backgroundColor = brasil;
+    document.getElementById('espanha').style.backgroundColor = espanha;
+    document.getElementById('eua').style.backgroundColor = eua;
 
 }
 
-/* Altera o idioma para ingles */
+/* Altera o idioma da pagina para ingles */
 document.getElementById('eua').onclick = () => {
 
-    /**teste */
-    document.getElementById('brasil').style.backgroundColor = "#d1d1d1";
-    document.getElementById('espanha').style.backgroundColor = "#d1d1d1";
-    document.getElementById('eua').style.backgroundColor = "#686eab";
+    AlterColorButton ("#d1d1d1", "#d1d1d1", "#686eab");
 
     document.querySelector('label[for=nome_id]').innerHTML = "Name";
     document.getElementById('nome_id').placeholder = "Type your name";
@@ -60,11 +66,9 @@ document.getElementById('eua').onclick = () => {
 
 /* Altera o idioma para Espanhol */
 document.getElementById('espanha').onclick = () => {
-    /**teste */
-    document.getElementById('brasil').style.backgroundColor = "#d1d1d1";
-    document.getElementById('espanha').style.backgroundColor = "#e02e16";
-    document.getElementById('eua').style.backgroundColor = "#d1d1d1";
 
+    AlterColorButton ("#d1d1d1", "#e02e16", "#d1d1d1" );
+    
     document.querySelector('label[for=nome_id]').innerHTML = "Nombre";
     document.getElementById('nome_id').placeholder = "Escribe tu nombre";
 
@@ -78,13 +82,11 @@ document.getElementById('espanha').onclick = () => {
 
     document.querySelector('#turistaLabel').innerHTML = "Turista";
 
-
     document.querySelector('label[for=comentario_id]').innerHTML = "Comentario";
 
     document.querySelector('label[for=county_id]').innerHTML = "País";
     document.querySelector('label[for=state_id]').innerHTML = "Departamento";
     document.querySelector('label[for=city_id]').innerHTML = "Ciudad";
-
 
     var escol = ["Escuela primaria incompleta", "Educación primaria completa",
         "Escuela secundaria incompleta", "Completado la escuela secundaria", "Educación superior incompleta",
@@ -98,11 +100,9 @@ document.getElementById('espanha').onclick = () => {
 
 /* Altera o Idioma Para Portugês */
 document.getElementById('brasil').onclick = () => {
-    /**teste */
-    document.getElementById('brasil').style.backgroundColor = "#00b440";
-    document.getElementById('espanha').style.backgroundColor = "#d1d1d1";
-    document.getElementById('eua').style.backgroundColor = "#d1d1d1";
 
+    AlterColorButton ("#00b440", "#d1d1d1", "#d1d1d1" );
+    
     document.querySelector('label[for=nome_id]').innerHTML = "Nome";
     document.getElementById('nome_id').placeholder = "Digite seu nome";
 

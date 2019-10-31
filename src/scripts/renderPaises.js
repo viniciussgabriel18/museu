@@ -12,22 +12,6 @@ function renderCidades (pais_id){
     });
 }
 
-/* Cria Estado se não existir */
-function criaEstado (){
-    var Estado = document.getElementById('estado');
-    var labelElement = document.createElement('label');
-    
-    labelElement.setAttribute('for', 'state_id');
-    labelElement.innerHTML = 'Estado';
-    Estado.appendChild(labelElement);
-
-    var selectElement = document.createElement('select');
-    
-    selectElement.setAttribute('id', 'state_id');
-    selectElement.setAttribute('class', 'form-control');
-    Estado.appendChild(selectElement);
-}
-
 /* Envia solicitação dos Paises Para o banco e renderiza  */
 $.getJSON ("./src/services/BuscaPaises.php?busca=country", function (response){
     let SelectPaises = document.getElementById ('country_id');
@@ -42,27 +26,21 @@ $.getJSON ("./src/services/BuscaPaises.php?busca=country", function (response){
 
 /* Esculta modificações dos selects dos Paises */
 $('#country_id').change (()=>{
+
     var idCountry = document.getElementById('country_id').value;
 
     document.getElementById('city_id').innerHTML = "";
+    document.getElementById('state_id').innerHTML = "";
     
-    if (document.getElementById('state_id') != null){
-        document.getElementById('state_id').innerHTML = "";
-    }
-
     /*Solicita estados de um pais */
     $.getJSON("./src/services/BuscaPaises.php?busca=states&idPais="+idCountry, function (response) {
 
         if (response == null){
-            console.log ("Vinicius");
-            $('#state_id').hide ();
-            $('label[for=state_id]').remove();
+            $('#estado').hide();
             renderCidades (idCountry);
         }else {
-            if (document.getElementById('state_id') == null) {
-                criaEstado ();
-            }
-            
+            $('#estado').show();
+
             let SelectStates = document.getElementById('state_id');
             
             response.forEach(element => {
@@ -77,7 +55,6 @@ $('#country_id').change (()=>{
 
 /* Esculta alteraçao no select dos paises e renderiza as cidades */
 $('#state_id').change(() => {
-    var idCountry = document.getElementById('country_id').value;
     var idState = document.getElementById('state_id').value;
 
     $.getJSON("./src/services/BuscaPaises.php?busca=cities&idState=" + idState, function (response) {

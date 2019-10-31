@@ -2,15 +2,17 @@ img#navimg {
     position: relative;
     height: 50px;
     width: 100%;
-    padding-left: .2%;  
+    /* margin-left: .2%;   */
 }
 
 div#linhaNav {
-  margin-right: 0.2%;
+  margin-right: .01%;
 }
 
 div#LinhaForm {
+    margin-right: .01%;
     margin-top: 2%; 
+    /* padding-left: .1%; */
 }
 
 div#LinhaRodaPe {
@@ -27,13 +29,13 @@ div#turista{
 
 img#log {
     /* display: flex; */
-    width: 7%;
-    height: 45px;
+    width: 5.6%;
+    height: 40px;
     float: left;
     margin-left: .7%;
 }
-
 p#titulo {
+
     font-size: 160%;
     float: left;
     z-index: auto;
@@ -75,10 +77,22 @@ div#divSimbolo {
 
 div#rodape{
     margin-top: 2%;
-    background-color: aqua;
+    background-color: brown;
     height: 50px;
+    margin-right: .01%;
 }
 
 div#form2 {
-    display: inline-block;
+    margin-right: .2%;
+}
+
+div#rodape div p{
+    text-align: center;
+    font-size: 200%;
+}
+
+button {
+    float: right;
+    margin-right: 1px;
+    margin-top: 20%;
 }

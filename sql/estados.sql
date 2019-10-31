@@ -1,6 +1,6 @@
 CREATE TABLE estados (
   id INTEGER PRIMARY KEY ,
-  paise_id INTEGER KEY NOT NULL,
+  paise_id INTEGER NOT NULL,
   nome CHAR(100)  NOT NULL
   );
 

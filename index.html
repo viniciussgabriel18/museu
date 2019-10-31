@@ -8,8 +8,6 @@
     
     <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap4-toggle.min.css">
-    <link rel="stylesheet" href="./css/EstiloFormulario.css">
     <link rel="stylesheet" href="./css/turistaCheckbox.css">
     <link rel="stylesheet" href="./css/OrganizaPage.css">
         
@@ -18,27 +16,28 @@
 
 <body onload="standardcolor()">
     <div class="row" id="linhaNav">
-        <img src="./src/img/img/topper-museu.png"  class="img-responsive" id="navimg">
+        <img src="./src/img/nav/nav-img.png"  class="img-responsive" id="navimg">
 
         <div id="nav">    
             <div class= "col" id="logo">
                 <p  class="text-justify" id="titulo"> Museu de Arqueologia do Pantanal</p> 
-                <img src="./src/img/img/logoMuseu.png" id="log">
+                <img src="./src/img/nav/logo-img.png" id="log">
             </div>
             
             <div class="col" id="lang" >
-                <img src="./src/img/img/pt.png" class="imglang" id="brasil">
-                <img src="./src/img/img/esp.png" class="imglang" id="espanha">
-                <img src="./src/img/img/eng.png" class="imglang"  id="eua">
+                <img src="./src/img/idiomas/pt.png" class="imglang" id="brasil">
+                <img src="./src/img/idiomas/esp.png" class="imglang" id="espanha">
+                <img src="./src/img/idiomas/eng.png" class="imglang"  id="eua">
             </div>   
         </div>
     </div>
+    
     <form action="./src/services/CadastroPessoas.php" method="POST">
     
     <div class="row" id="LinhaForm">
         
         <div class="col" id="divSimbolo">
-            <img src="./src/img/img/MuseuSimbolo.jpg" class="img-fluid rounded mx-auto d-block" id="simbolo">
+            <img src="./src/img/nav/museu-img.jpg" class="img-fluid rounded mx-auto d-block" id="simbolo">
         </div>
         
         <!-- Coluna 1 do Formulario -->
@@ -71,7 +70,7 @@
                   <textarea class="form-control" name="comentario" id="comentario_id" rows="3"></textarea>
                 </div>
         
-                <button type="submit" class="btn btn-primary" >Salvar</button>
+               
             </div>
         
             <!-- Coluna 2 do Formulário -->
@@ -103,7 +102,7 @@
               <div class="form-group" id="estado">
                 <label for="state_id">Estado</label>
                 <select id="state_id" class="form-control" >
-                  <option value="-1"> Selecione o estado ...</option>
+                  <option value=""> Selecione o estado ...</option>
                 </select>
               </div>
                 
@@ -113,49 +112,43 @@
                     <option value=""> Selecione a cidade...</option>
                   </select>
               </div>
+
+              <button type="submit" class="btn btn-primary" >Salvar</button>
             </div>
         </div>
     </form>
           
           <!-- Rodapé Da Pagina, numero de visitantes -->
-          <div class="row" id="LinhaRodaPe" >
+    <div class="row" id="LinhaRodaPe" >
+      <div class="col-4"></div>
         
-            <div class="col-4"></div>
-            <div class="col" >
-              <span class="text-left text" id="visitAno">
-              </span>
-        
-              <span id="visitAnoVal"></span>
-        
-            </div>
-        
-            <div class="col" >
-              <span class="text-left text" id="visitMes">
-              </span>
-        
-              <span id="visitMesVal"></span>
-            </div>
-        
-            <div class="col" >
-              <span class="text-left text" id="visitTotal">
-              </span>
-        
-              <span id="visitTotalVal"></span>
-            </div>
-          </div>
-        
-        <div class="row" id="rodape">
-            <p></p>
-        </div>
-          <!-- scripts js -->
-          <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
-          <script src="./bootstrap/js/bootstrap4-toggle.min.js"></script>
-          <script src="./src/scripts/languages.js"></script>
-          <script src="./src/scripts/renderPaises.js"> </script>
-          <script src="./src/scripts/RenderVisitantes.js"></script> 
-
-</body>
+      <div class="col" >
+          <span class="text-left text" id="visitAno"></span>
+          <span id="visitAnoVal"></span>
+      </div>
     
+      <div class="col" >
+        <span class="text-left text" id="visitMes"></span>
+        <span id="visitMesVal"></span>
+      </div>
+    
+        <div class="col" >
+          <span class="text-left text" id="visitTotal"></span>
+          <span id="visitTotalVal"></span>
+        </div>
+      </div>
+    
+    <div class="row" id="rodape">
+        <div class="col" >
+          <p></p>
+        </div>
+    </div>
 
+    <!-- scripts js -->
+    <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
+    <script src="./src/scripts/languages.js"></script>
+    <script src="./src/scripts/renderPaises.js"> </script>
+    <script src="./src/scripts/RenderVisitantes.js"></script> 
 
-z </html>
+  </body>
+</html>

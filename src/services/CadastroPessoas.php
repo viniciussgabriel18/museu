@@ -20,7 +20,7 @@ if ($dbconnect->connect_error)  {
     echo ("Erro ao Conectar");
 }else {
     
-    $sql = "INSERT INTO Dados_cadastro (nome, idade, escolaridade_id, insituicao,turista, comentario, data_cadastro, cidade_id)
+    $sql = "INSERT INTO `assinaturas` (nome, idade, escolaridade_id, insituicao,turista, comentario, data_cadastro, cidade_id)
     VALUES ('$nome','$idade','$escolaridade','$instituicao','$turista', '$comentario','$data', '$cidade')";
 
     if($dbconnect->query($sql)){

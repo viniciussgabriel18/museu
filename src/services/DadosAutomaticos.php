@@ -6,19 +6,19 @@ $opcao = isset ($_GET['opcao']) ? $_GET['opcao']: '';
 
     
 function getVisitantesAno($dbconnect, $data) {
-    $vistitantesAnos = $dbconnect->query("SELECT COUNT(*) AS quant FROM Dados_cadastro WHERE YEAR(data_cadastro) = $data");
+    $vistitantesAnos = $dbconnect->query("SELECT COUNT(*) AS quant FROM assinaturas WHERE YEAR(data_cadastro) = $data");
     $result = $vistitantesAnos->fetch_assoc ();
     echo json_encode($result);
 }
 
 function getVisitantesMes ($dbconnect, $mes){
-    $visitantesMes = $dbconnect->query ("SELECT COUNT(*) AS quant FROM Dados_cadastro WHERE MONTH(data_cadastro) = $mes");
+    $visitantesMes = $dbconnect->query ("SELECT COUNT(*) AS quant FROM assinaturas WHERE MONTH(data_cadastro) = $mes");
     $result = $visitantesMes->fetch_assoc ();
     echo json_encode($result);
 }
 
 function getTotalVisitantes($dbconnect){
-    $totalVisitantes = $dbconnect->query("SELECT COUNT(*) AS quant FROM Dados_cadastro");
+    $totalVisitantes = $dbconnect->query("SELECT COUNT(*) AS quant FROM assinaturas");
     $result = $totalVisitantes->fetch_assoc ();
     echo json_encode($result);
 } 

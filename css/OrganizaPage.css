@@ -28,8 +28,13 @@ p#titulo {
     top: 20%;
     margin-left: 1%;
     float:left; 
-    font-size: 160%;
-    color: black;  
+    font-size: 170%;
+    color: white;
+    text-shadow: 1px 0px 0px black,
+                -2px 0px 0px black,
+                 0px 2px 0px black,
+                 0px -1px 0px black;
+
 }
 
 .imglang{
@@ -37,7 +42,7 @@ p#titulo {
     height: auto;  
     background-color:#d1d1d1;
 	border-radius:28px;
-	border:1px solid black;
+	border:1px solid #ced4da;
 	cursor:pointer;
 	color:#ffffff;
     float: right;

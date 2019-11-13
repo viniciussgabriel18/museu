@@ -1,5 +1,7 @@
 $.getJSON("./src/services/BuscaEscolaridade.php?", function (response){
     var select = document.getElementById ("escolaridade_id");
+    console.log (response);
+    
 
     response.forEach(element => {
         var option = document.createElement('option');
@@ -8,3 +10,4 @@ $.getJSON("./src/services/BuscaEscolaridade.php?", function (response){
         select.appendChild (option);
     });
 })
+

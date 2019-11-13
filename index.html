@@ -23,9 +23,9 @@
       </div>
       
          <div class="col-4 offset-1" id="lang">
-            <img src="./src/img/idiomas/imgNovas/icon-PT-menor.png" class="imglang" id="brasil">
-            <img src="./src/img/idiomas/imgNovas/icon-ESP-menor.png" class="imglang" id="espanha">
-            <img src="./src/img/idiomas/imgNovas/icon-ENG-menor.png" class="imglang" id="eua">
+           <img src="./src/img/idiomas/imgNovas/icon-ENG-menor.png" class="imglang" id="eua">
+           <img src="./src/img/idiomas/imgNovas/icon-ESP-menor.png" class="imglang" id="espanha">
+           <img src="./src/img/idiomas/imgNovas/icon-PT-menor.png" class="imglang" id="brasil">
         </div>
       </div>
 
@@ -39,9 +39,9 @@
     <!-- Coluna 1 do Formulario -->
     <div class="col">
 
-      <div class="row">
+      <div class="row" id="texto">
         <div class="col">
-          <p id="msg">Nos visitou? Por favor, assine nosso livro de visitas!</p>
+          <h4 id="msg">Nos visitou? Por favor, assine nosso livro de visitas!</h4>
 
               <p id="msg2">A assinatura do livro de visitas é de grande importância para o museu,
               especialmente para podermos solicitar fundos junto ao governo, 
@@ -51,7 +51,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="formulario">
         <div class="col">
             <form action="./src/services/CadastroPessoas.php" method="POST">
               <div class="form-group">
@@ -145,31 +145,26 @@
 
       
 
-    
-
-    
-
-
-
-    <nav class="navbar fixed-bottom " id="rodape">
+    <footer class="fixed-bottom">
       <div class="col">
         <img src="./src/img/rodape/Fabrica.png" id="fabrica">
         
-        <p>
+        <p id="tfooter">
           Todos os direitos reservados.
           Universidade Federal de Mato Grosso do Sul.  
-          Copyright &copy; 2019
+          Copyright &copy; 2019<br>
+          Desenvolvedor: Vinicius Gabriel de Souza</br>
         </p>
-         <p> Desenvolvedor: Vinicius Gabriel de Souza</p>
       </div>  
-    </nav>
+    </footer>
 
   <!-- scripts js -->
   <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
-  <script src="./src/scripts/languages.js"></script>
+  <!-- <script src="./src/scripts/languages.js"></script> -->
   <script src="./src/scripts/renderPaises.js"> </script>
   <script src="./src/scripts/RenderVisitantes.js"></script>
   <script src="./src/scripts/renderEscolaridade.js"></script>
+  <script src="./src/scripts/idiomas.js"></script>
 
 </body>
 </html>

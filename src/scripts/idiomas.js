@@ -1,3 +1,4 @@
+// Define as cores padrões dos botões quando o documento é carregado
 $(document).ready (() => {
     document.getElementById('brasil').style.backgroundColor = "#00b440";
     document.getElementById('espanha').style.backgroundColor = "#d1d1d1";
@@ -5,6 +6,7 @@ $(document).ready (() => {
 
 });
 
+// Função que altera as cores dos botões
 function AlterColorButton (brasil, espanha, eua){
     document.getElementById('brasil').style.backgroundColor = brasil;
     document.getElementById('espanha').style.backgroundColor = espanha;
@@ -12,6 +14,7 @@ function AlterColorButton (brasil, espanha, eua){
 
 }
 
+// Puxa as labels do banco de dados e altera no Front de acordo com o evento que chamou
 function AlterLabel (idioma){
     $.getJSON("./src/services/BuscaLabel.php?id="+idioma, function (elemento){
         document.querySelector('label[for=nome_id]').innerHTML = elemento[0].nome;
@@ -27,6 +30,7 @@ function AlterLabel (idioma){
     });
 }
 
+// Puxa as informações dos visitates do banco de dados e renderiza
 function AlterVisitantes (idioma){
     $.getJSON("./src/services/BuscaLabel.php?id="+idioma, function (elemento){
         $('#visitMes').html(elemento[0].visitMes);
@@ -36,25 +40,26 @@ function AlterVisitantes (idioma){
 }
 
 function AlterPlaceholder (idioma){
-    $.getJSON("./src/services/BuscaPlaceholder.php?idioma="+idioma, function (elemento){
+    // console.log ("Vincius");
+    $.getJSON("./src/services/BuscaLabel.php?id="+idioma, function (elemento){
         console.log (elemento);
 
-        document.getElementById('nome_id').placeholder = elemento[0].nome;
-        document.getElementById('idade_id').placeholder = elemento[0].idade;
-        document.getElementById('instituicao_id').placeholder = elemento[0].instituicao;
+        document.getElementById('nome_id').placeholder = elemento[0].nomePlaceholder;
+        document.getElementById('idade_id').placeholder = elemento[0].idadePlaceholder;
+        document.getElementById('instituicao_id').placeholder = elemento[0].instituicaoPlaceholder;
     });
 }
 
-// $.getJSON("./src/services/BuscaEscolaridade.php?", function (response){
-//     var select = document.getElementById ("escolaridade_id");
+$.getJSON("./src/services/BuscaEscolaridade.php?", function (response){
+    var select = document.getElementById ("escolaridade_id");
     
-//     response.forEach(element => {
-//         var option = document.createElement('option');
-//         option.innerHTML = element.descricao;
-//         option.value = element.id;
-//         select.appendChild (option);
-//     });
-// })
+    response.forEach(element => {
+        var option = document.createElement('option');
+        option.innerHTML = element.descricao;
+        option.value = element.id;
+        select.appendChild (option);
+    });
+})
 
 $('#eua').click (function (){
     AlterColorButton ("#d1d1d1", "#d1d1d1", "#686eab");

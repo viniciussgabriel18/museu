@@ -1,12 +1,13 @@
 <?php
+
 require_once ("./FuncAuxiliares.php");
 
 $dbconnect = Conectar ();
 setCharset ($dbconnect);
 
-$opcao = isset($_GET['id']) ? $_GET['id'] : '';
+$opcao = isset($_GET['idioma']) ? $_GET['idioma'] : '';
 
-function BuscaLang($dbconnect, $idLang) {
+function BuscaLabel($dbconnect, $idLang) {
     $result = array ();
 
     $sql = "SELECT * FROM label WHERE id = $idLang";
@@ -19,9 +20,7 @@ function BuscaLang($dbconnect, $idLang) {
     echo json_encode($result);
 }
 
-
-
-BuscaLang ($dbconnect, $opcao);
+BuscaLabel ($dbconnect, $opcao);
 
 $dbconnect->close ();
 

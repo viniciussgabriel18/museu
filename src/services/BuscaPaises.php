@@ -62,7 +62,7 @@ function BuscacidadePais ($dbconnect, $country_id){
     echo json_encode($result);
 }
 
-// Verifica qual solicitação foi eviada por GET JSON
+// Verifica qual solicitação foi recebida por GET e Chama um SELECT 
 
     switch ($opcao){
         case 'country':{
@@ -86,4 +86,5 @@ function BuscacidadePais ($dbconnect, $country_id){
     }
    
 $dbconnect->close ();
+
 ?>

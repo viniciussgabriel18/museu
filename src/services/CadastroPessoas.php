@@ -10,7 +10,7 @@ $nome = $_POST["nome"];
 $idade = $_POST["idade"];
 $escolaridade = $_POST["escolaridade"];
 $instituicao = $_POST["instituicao"];
-$turista = isset ($_POST["turista"])? $_POST["turista"]: 0;
+$profissao = $_POST["profissao"];
 $comentario = $_POST["comentario"];
 $data = GeraData();
 $cidade = $_POST["cidade"];
@@ -20,8 +20,8 @@ if ($dbconnect->connect_error)  {
     echo ("Erro ao Conectar");
 }else {
     
-    $sql = "INSERT INTO `assinaturas` (nome, idade, escolaridade_id, insituicao,turista, comentario, data_cadastro, cidade_id)
-    VALUES ('$nome','$idade','$escolaridade','$instituicao','$turista', '$comentario','$data', '$cidade')";
+    $sql = "INSERT INTO `assinaturas` (nome, idade, escolaridade_id, insituicao, profissao, comentario, data_cadastro, cidade_id)
+    VALUES ('$nome','$idade','$escolaridade','$instituicao','$profissao', '$comentario','$data', '$cidade')";
 
     if($dbconnect->query($sql)){
         header('Location: ../../index.html');

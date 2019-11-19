@@ -12,7 +12,7 @@ function renderCidades (pais_id){
     });
 }
 
-/* Envia solicitação dos Paises Para o banco e renderiza  */
+/* Busca as informações dos Paises Para o banco e renderiza  */
 $.getJSON ("./src/services/BuscaPaises.php?busca=country", function (response){
     let SelectPaises = document.getElementById ('country_id');
         

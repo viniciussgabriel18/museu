@@ -132,8 +132,17 @@ footer {
 }
 
 p#tfooter{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    margin-top: 25px;
+}
+
+p#desenvolvedor{
+    position: relative;
     color: black;
     text-align: center;
     font-size: 1rem;
-    margin-top: 25px;
+    
+    bottom: 75%;
 }

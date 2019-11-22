@@ -12,25 +12,39 @@ function renderCidades (pais_id){
     });
 }
 
-/* Envia solicitação dos Paises Para o banco e renderiza  */
-$.getJSON ("./src/services/BuscaPaises.php?busca=country", function (response){
-    let SelectPaises = document.getElementById ('country_id');
-        
-        response.forEach(element => {
-            let Options = document.createElement ('option');
-            Options.innerHTML = element.nome;
-            Options.value = element.id;
-            SelectPaises.appendChild (Options);
-        });
+// function semNome (select, texto){
+//     var option = document.createElement ('option');
+//     option.innerHTML = texto;
+//     option.value = undefined;
+//     select.appendChild(option);
+
+// }
+
+/* Busca as informações dos Paises Para o banco e renderiza  */
+
+$(document).ready (()=> {
+    $.getJSON ("./src/services/BuscaPaises.php?busca=country", function (response){
+        let SelectPaises = document.getElementById ('country_id');
+            
+            response.forEach(element => {
+                let Options = document.createElement ('option');
+                Options.innerHTML = element.nome;
+                Options.value = element.id;
+                SelectPaises.appendChild (Options);
+            });
+    });
 });
+
+
 
 /* Esculta modificações dos selects dos Paises */
 $('#country_id').change (()=>{
 
     var idCountry = document.getElementById('country_id').value;
-
+    
+    document.getElementById('state_id').innerHTML =  "";
     document.getElementById('city_id').innerHTML = "";
-    document.getElementById('state_id').innerHTML = "";
+
     
     /*Solicita estados de um pais */
     $.getJSON("./src/services/BuscaPaises.php?busca=states&idPais="+idCountry, function (response) {
@@ -69,3 +83,5 @@ $('#state_id').change(() => {
         });
     });
 });
+
+

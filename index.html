@@ -7,47 +7,44 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Vinicius Gabriel">
 
+  <!-- Links css-->
   <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/turistaCheckbox.css">
   <link rel="stylesheet" href="./css/OrganizaPage.css">
 
   <title>Livro de Visitas</title>
 </head>
 
 <body>      
+  <!-- Linha header  -->
     <div class="row" id="nav">
       <div class="col-7">
         <p id="titulo"> Museu de Arqueologia do Pantanal</p>
         <img src="./src/img/nav/logo-img.png" id="log">
       </div>
       
-         <div class="col-4 offset-1" id="lang">
-           <img src="./src/img/idiomas/imgNovas/icon-ENG-menor.png" class="imglang" id="eua">
-           <img src="./src/img/idiomas/imgNovas/icon-ESP-menor.png" class="imglang" id="espanha">
-           <img src="./src/img/idiomas/imgNovas/icon-PT-menor.png" class="imglang" id="brasil">
-        </div>
+      <!-- Botões de idiomas -->
+      <div class="col-4 offset-1" id="lang">
+        <img src="./src/img/idiomas/imgNovas/icon-ENG-menor.png" class="imglang" id="eua">
+        <img src="./src/img/idiomas/imgNovas/icon-ESP-menor.png" class="imglang" id="espanha">
+        <img src="./src/img/idiomas/imgNovas/icon-PT-menor.png" class="imglang" id="brasil">
       </div>
+    </div>
 
       
   <div class="row" id="LinhaForm">
 
+    <!-- Imagem lateral do Museu -->
     <div class="col-4" id="divSimbolo">
       <img src="./src/img/nav/museu-img.jpg" class="img-fluid rounded mx-auto d-block" id="simbolo">
     </div>
 
     <!-- Coluna 1 do Formulario -->
     <div class="col">
-
       <div class="row" id="texto">
         <div class="col">
-          <h4 id="msg">Nos visitou? Por favor, assine nosso livro de visitas!</h4>
-
-              <p id="msg2">A assinatura do livro de visitas é de grande importância para o museu,
-              especialmente para podermos solicitar fundos junto ao governo, 
-              comprovando a frequência de visitação do mesmo. 
-              Nossos números também poderão ser enviados para pesquisas mundiais 
-              sobre visitação de museus.</p>
+          <h4 id="msg"></h4>
+          <p id="msg2"> </p>
         </div>
       </div>
 
@@ -55,116 +52,98 @@
         <div class="col">
             <form action="./src/services/CadastroPessoas.php" method="POST">
               <div class="form-group">
-                <label for="nome_id">Nome</label>
+                <label for="nome_id"></label>
                 <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value=""
                   required>
               </div>
       
               <div class="form-group" id="form1">
-                <label for="escolaridade_id">Escolaridade</label>
-                <select class="form-control" name="escolaridade" id="escolaridade_id"></select>
+                <label for="escolaridade_id"></label>
+                <select class="form-control" name="escolaridade" id="escolaridade_id" required> </select>
+                  
               </div>
       
               <div class="form-group">
-                <label for="instituicao_id">Instituição</label>
+                <label for="instituicao_id"></label>
                 <input type="text" name="instituicao" class="form-control" id="instituicao_id" placeholder="Instituição">
               </div>
       
               <div class="form-group">
-                <label for="comentario_id">Comentario</label>
+                <label for="comentario_id"></label>
                 <textarea class="form-control" name="comentario" id="comentario_id" rows="3"></textarea>
               </div>
-          </div>
+        </div>
 
           <!-- Coluna 2 do Formulário -->
-          <div class="col" id="form2">
-              <div class="form-row">
-        
-                <div class="form-group col">
-                  <label for="idade_id">Idade</label>
-                  <input type="number" name="idade" class="form-control" id="idade_id" placeholder="Idade" value="" required
-                    min="13" max="110">
-                </div>
-        
-                <div class="form-group col" id="turista">
-                  <label class="container">
-                    <p id="turistaLabel">Turista</p>
-                    <input type="checkbox" name="turista" value="1" id="a">
-                    <span class="checkmark" value="4" id="b"></span>
-                  </label>
-                </div>
-              </div>
-        
-              <div class="form-group">
-                <label for="county_id">Pais</label>
-                <select id="country_id" class="form-control">
-                  <option value="-1"> Selecione o pais ...</option>
-                </select>
-              </div>
-        
-              <div class="form-group" id="estado">
-                <label for="state_id">Estado</label>
-                <select id="state_id" class="form-control">
-                  <option value=""> Selecione o estado ...</option>
-                </select>
-              </div>
-        
-              <div class="form-group">
-                <label for="city_id">Cidade</label>
-                <select id="city_id" class="form-control" name="cidade">
-                  <option value=""> Selecione a cidade...</option>
-                </select>
-              </div>
-        
-              <button type="submit" class="btn btn-primary">Salvar</button>
-              </form>
+        <div class="col" id="form2">
+          <div class="form-row">
+            
+            <div class="form-group col">
+              <label for="idade_id">Idade</label>
+              <input type="number" name="idade" class="form-control" id="idade_id" value="" required
+                min="13" max="110">
+            </div>
+
+            <div class="form-group col">
+              <label for="profissao_id"> Profissão</label>
+              <input type="text" class="form-control" name="profissao" placeholder="Profissão" id="profissao">
             </div>
           </div>
 
-            <!-- Rodapé Da Pagina, numero de visitantes -->
-  <div class="row" id="LinhaVisitantes">
-      <!-- <div class="col-4"></div> -->
-  
-      <div class="col">
-        <span class="text-left text" id="visitAno"></span>
-        <span id="visitAnoVal"></span>
-      </div>
-  
-      <div class="col">
-        <span class="text-left text" id="visitMes"></span>
-        <span id="visitMesVal"></span>
-      </div>
-  
-      <div class="col">
-        <span class="text-left text" id="visitTotal"></span>
-        <span id="visitTotalVal"></span>
-      </div>
-    </div>
+          <div class="form-group">
+            <label for="county_id">Pais</label>
+            <select id="country_id" class="form-control" required></select>
+          </div>
+      
+          <div class="form-group" id="estado">
+            <label for="state_id" >Estado</label>
+            <select id="state_id" class="form-control"></select>
+          </div>
+      
+          <div class="form-group">
+            <label for="city_id">Cidade</label>
+            <select id="city_id" class="form-control" name="cidade" required></select>
+          </div>
+      
+          <button type="submit" class="btn btn-primary">Salvar</button>
+          </form>
         </div>
       </div>
 
-      
+      <!-- Rodapé Da Pagina, numero de visitantes -->
+      <div class="row" id="LinhaVisitantes">
+        <div class="col">
+          <span class="text-left text" id="visitAno"></span>
+          <span id="visitAnoVal"></span>
+        </div>
+    
+        <div class="col">
+          <span class="text-left text" id="visitMes"></span>
+          <span id="visitMesVal"></span>
+        </div>
+    
+        <div class="col">
+          <span class="text-left text" id="visitTotal"></span>
+          <span id="visitTotalVal"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <footer class="fixed-bottom">
-      <div class="col">
-        <img src="./src/img/rodape/Fabrica.png" id="fabrica">
-        
-        <p id="tfooter">
-          Todos os direitos reservados.
-          Universidade Federal de Mato Grosso do Sul.  
-          Copyright &copy; 2019<br>
-          Desenvolvedor: Vinicius Gabriel de Souza</br>
-        </p>
-      </div>  
-    </footer>
+      
+<!-- Rodapé da Pagina -->
+  <footer class="fixed-bottom">
+    <div class="col">
+      <img src="./src/img/rodape/Fabrica.png" id="fabrica">  
+        <p id="tfooter"></p>
+    </div>  
+  </footer>
 
   <!-- scripts js -->
   <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
-  <!-- <script src="./src/scripts/languages.js"></script> -->
+  <script src="./src/scripts/idiomas.js"></script>
   <script src="./src/scripts/renderPaises.js"> </script>
   <script src="./src/scripts/RenderVisitantes.js"></script>
-  <script src="./src/scripts/renderEscolaridade.js"></script>
-  <script src="./src/scripts/idiomas.js"></script>
 
-</body>
+  </body>
 </html>

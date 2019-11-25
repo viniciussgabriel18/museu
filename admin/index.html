@@ -1,0 +1,76 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/OrganizaPage.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/relatorios.css">
+    <title>Relatorios</title>
+</head>
+
+<body>
+    <div class="row" id="nav">
+        <div class="col">
+            <p id="titulo"> Museu de Arqueologia do Pantanal</p>
+            <img src="../src/img/nav/logo-img.png" id="log">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <p id="titulo-relatorio">Relatórios de Visitas</p>
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="col">
+            <div class="form-group">
+                <label for="data_inicial"> Data Inicial</label>
+                <input type="date" class="form-control" id="data_inicial">
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group col-10" >
+                <label for="data_final"> Data Final</label>
+                <input type="date" class="form-control" id="data_final">
+            </div>
+        </div>
+
+        <div class="col-1">
+            <br>
+            <button type="button" class="btn btn-primary" id="gerar"> Gerar</button>
+        </div>
+    </div>
+    
+    <div class="row" id="table_relatorio">
+        <div class="col">
+                <table class="table table-bordered table-hover" id="table">
+                    <thead id="thead" style="background-color: rgb(161, 140, 108);">
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Escolaridade</th>
+                            <th scope="col">Instituição</th>
+                            <th scope="col">Profissão</th>
+                            <th scope="col">Pais</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Cidade</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="tbody"></tbody>
+                </table>
+        </div>
+    </div>
+
+
+    <script src="../src/scripts/jquery-1.10.2.js"></script>
+    <script src="../src/scripts/relatorios.js"></script>
+
+</body>
+</html>

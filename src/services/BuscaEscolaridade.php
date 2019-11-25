@@ -1,5 +1,6 @@
 <?php
-require_once("./FuncAuxiliares.php");
+
+require_once ("./FuncAuxiliares.php");
 
 $dbconnect = Conectar();
 setCharset($dbconnect);

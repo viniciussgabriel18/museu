@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/OrganizaPage.css">
+  <link rel="shortcut icon" href="./src/img/nav/favicon.png"/>
 
   <title>Livro de Visitas</title>
 </head>
@@ -43,8 +44,8 @@
     <div class="col">
       <div class="row" id="texto">
         <div class="col">
-          <h4 id="msg"></h4>
-          <p id="msg2"> </p>
+          <h4 id="msg">Nos visitou? Por favor, assine nosso livro de visitas!</h4>
+          <p id="msg2">A assinatura do Livro de Visitas é de grande importância para o museu, especialmente para subsidiar a solicitação de fundos junto ao governo, comprovando a frequência de visitantes. Nossos números poderão ser enviados para compor pesquisas mundiais sobre visitação de museus.</p>
         </div>
       </div>
 
@@ -52,24 +53,23 @@
         <div class="col">
             <form action="./src/services/CadastroPessoas.php" method="POST">
               <div class="form-group">
-                <label for="nome_id"></label>
-                <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value=""
-                  required>
+                <label for="nome_id">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome_id" placeholder="Digite seu Nome" value=""required>
               </div>
       
               <div class="form-group" id="form1">
-                <label for="escolaridade_id"></label>
+                <label for="escolaridade_id">Escolaridade</label>
                 <select class="form-control" name="escolaridade" id="escolaridade_id" required> </select>
                   
               </div>
       
               <div class="form-group">
-                <label for="instituicao_id"></label>
+                <label for="instituicao_id">Intituição</label>
                 <input type="text" name="instituicao" class="form-control" id="instituicao_id" placeholder="Instituição">
               </div>
       
               <div class="form-group">
-                <label for="comentario_id"></label>
+                <label for="comentario_id">Comentário</label>
                 <textarea class="form-control" name="comentario" id="comentario_id" rows="3"></textarea>
               </div>
         </div>
@@ -113,17 +113,17 @@
       <!-- Rodapé Da Pagina, numero de visitantes -->
       <div class="row" id="LinhaVisitantes">
         <div class="col">
-          <span class="text-left text" id="visitAno"></span>
+          <span class="text-left text" id="visitAno">Visitantes anuais:</span>
           <span id="visitAnoVal"></span>
         </div>
     
         <div class="col">
-          <span class="text-left text" id="visitMes"></span>
+          <span class="text-left text" id="visitMes">Visitantes mensais:</span>
           <span id="visitMesVal"></span>
         </div>
     
         <div class="col">
-          <span class="text-left text" id="visitTotal"></span>
+          <span class="text-left text" id="visitTotal">Total de visitantes:</span>
           <span id="visitTotalVal"></span>
         </div>
       </div>
@@ -135,7 +135,8 @@
   <footer class="fixed-bottom">
     <div class="col">
       <img src="./src/img/rodape/Fabrica.png" id="fabrica">  
-        <p id="tfooter"></p>
+        <p id="tfooter">Todos os direitos reservados. Universidade Federal de Mato Grosso do Sul.  
+      Copyright &copy; 2019</p>
     </div>  
   </footer>
 

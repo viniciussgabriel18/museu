@@ -12,7 +12,8 @@ $('#gerar').click (()=> {
     tbody.innerHTML = "";
 
     $.getJSON ("../src/services/relatorios.php?dataInicial="+data_inicial+"&dataFinal="+data_final, function (response){
-
+        console.log (response);
+        
         response.forEach(element => {
             var tr = document.createElement('tr');
             
@@ -60,3 +61,25 @@ $('#gerar').click (()=> {
 });
 
 
+// function formatDate (date){
+//     var novaData;
+
+//     for (i = 8; i<=9; i++){
+//         novaData.push( date[i]);
+//     }
+//         novaData.push("/");
+    
+//     for (i = 5; i <= 6; i++){
+//         novaData.push( date[i]);
+//     }
+    
+//     novaData.push("/");
+
+//     for (i = 0; i < 4; i++){
+//         novaData.push( date[i]);
+//     }
+
+
+//     return novaData;
+
+// }

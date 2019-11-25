@@ -1,12 +1,18 @@
+html{
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
 div#LinhaForm {
     margin-right: .01%;
     height: 30%;
+    font-size: 100%;
 }
 
 div#LinhaVisitantes {
     width: 99.8%;
-    /* margin-top: 5%; */
     padding-left: .2%;
+    margin-top: 2%;
 }
 
 div#turista{
@@ -16,34 +22,30 @@ div#turista{
 
 img#log {
     position: relative;
-    top: 10%;
-    width: 50px;
-    height: 58px;
+    top: 12%;
+    width: 35px;
+    height: 43px;
     float: left;
     margin-left: 3%;
 }
 
 p#titulo {
     position: relative;
-    top: 20%;
+    top: 15%;
     margin-left: 1%;
     float:left; 
-    font-size: 200%;
+    font-size: 150%;
     color: black;
-    /* text-shadow: 1px 0px 0px black,
-                -2px 0px 0px black,
-                 0px 2px 0px black,
-                 0px -1px 0px black; */
 }
 
 .imglang{
     width: 65px;
     height: auto;  
     background-color:#d1d1d1;
-	border-radius:28px;
-	border:1px solid #000000;
-	cursor:pointer;
-	color:#ffffff;
+    border-radius:28px;
+    border:1px solid #000000;
+    cursor:pointer;
+    color:#ffffff;
     float: right;
     position: relative;
     top: 23%;
@@ -58,13 +60,12 @@ div#lang {
 
 img#simbolo {
    width: 100%;
-   height: 110%;
+   height: 100%;
 }   
 
 div#divSimbolo {
     margin-top: 0%;
     position: relative;
-    /* background-color: rgb(161, 140, 108) ; */
 }
 
 div#form2 {
@@ -82,23 +83,21 @@ nav p{
 button {
     float: right;
     margin-right: 1px;
-    /* margin-top: 20%; */
 }
 
 div#nav {
     position: relative;
-    height: 4.5rem;
-    margin-right:.1%;
+    height: 3.3rem;
     background-color: rgb(161, 140, 108);
 }
 
 img#fabrica {
     position: relative;
-    width: 7%;
-    bottom: 15px ;
+    width: 6%;
     height: auto;
+    margin-top: -1.2%;
     float: left;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 
 h4#msg {
@@ -108,7 +107,7 @@ h4#msg {
 
 p#msg2{
     text-align: center;
-    /* font-size: 90%; */
+    font-size: 100%;
 
 }
 
@@ -118,30 +117,41 @@ div#texto {
 }
 
 div#formulario {
-    width: 100%;
-    margin-top: 15px;
+    max-width: 100%;
+    font-size: 100%;
+    margin-top: 2%;
 }
 
 footer {
     position: fixed;
-    height: 100px;
+    height: 10%;
     bottom: 0;
-    width: 100%;
+    width: auto;
     background-color: rgb(161, 140, 108) ;
 }
 
 p#tfooter{
-    text-align: center;
-    color: black;
-    font-size: 1rem;
-    margin-top: 25px;
-}
-
-p#desenvolvedor{
     position: relative;
     color: black;
     text-align: center;
     font-size: 1rem;
-    
-    bottom: 75%;
+    margin-top: 1.5%;
+    margin-right: 10%;
+}
+#pop {
+    display:none;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-150px;
+    margin-top:-100px;
+    padding:10px;
+    width:300px;
+    height:200px;
+    border:1px solid #d0d0d0
+}
+
+#msgAlerta {
+    position: absolute;
+    float: right;
 }

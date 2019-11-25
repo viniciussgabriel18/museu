@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/OrganizaPage.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <link rel="shortcut icon" href="./src/img/nav/favicon.png"/>
 
   <title>Livro de Visitas</title>
@@ -105,11 +106,11 @@
             <select id="city_id" class="form-control" name="cidade" required></select>
           </div>
       
-          <button type="submit" class="btn btn-primary">Salvar</button>
+          <button type="submit" class="btn btn-primary" id="salvar">Salvar</button>
           </form>
         </div>
       </div>
-
+      
       <!-- Rodapé Da Pagina, numero de visitantes -->
       <div class="row" id="LinhaVisitantes">
         <div class="col">
@@ -130,7 +131,7 @@
     </div>
   </div>
 
-      
+  
 <!-- Rodapé da Pagina -->
   <footer class="fixed-bottom">
     <div class="col">
@@ -140,6 +141,7 @@
     </div>  
   </footer>
 
+  
   <!-- scripts js -->
   <script type="text/javascript" src="./src/scripts/jquery-1.10.2.js"></script>
   <script src="./src/scripts/idiomas.js"></script>

@@ -3,7 +3,7 @@
 require_once ("./FuncAuxiliares.php");
 
 /* Abre uma concecção com o banco de dados */
-$dbconnect = new mysqli("localhost", "root", "", "Museu");
+$dbconnect = Conectar ();
 
 /*Valores recebidos do Formulário */
 $nome = isset ($_POST["nome"]) ? $_POST["nome"] : NULL;
